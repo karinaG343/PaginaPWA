@@ -21,11 +21,6 @@ self.addEventListener("install", (e) => {
   e.waitUntil(cacheProm);
 });
 
-self.addEventListener("fetch", (e) => {
-  //cache-only
-  e.respondWith(caches.match(e.request));
-});
-
 self.addEventListener('fetch', e =>{
   //cache with network fallback
   const respuesta = caches.match( e.request )
