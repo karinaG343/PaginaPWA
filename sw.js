@@ -2,7 +2,6 @@ self.addEventListener('install', e =>{
   const cacheProm = caches.open('cache-v1')
       .then(cache => {
           return cache.addAll([
-            
               'index.html',
               'css/style.css',
               'css/style.css',
